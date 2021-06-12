@@ -1,0 +1,86 @@
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, minmax(170px, 1fr));
+  grid-template-areas:
+    "box1 box1 box2 box3"
+    "box1 box1 box4 box5"
+    "hox6 box7 box8 box8";
+}
+
+.gallery > .box1 {
+  grid-area: box1;
+  background: url("https://picsum.photos/400/400");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery > .box2 {
+  grid-area: box2;
+  padding: 15px;
+  background-color: white;
+}
+
+.gallery > .box3 {
+  grid-area: box3;
+  background: url("https://picsum.photos/150/151");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery > .box4 {
+  grid-area: box4;
+  background: url("https://picsum.photos/150/152");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery > .box5 {
+  background-color: white;
+  grid-area: box5;
+  padding: 15px;
+}
+
+.gallery > .box6 {
+  grid-area: box6;
+  background: url("https://picsum.photos/150/152");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery > .box7 {
+  grid-area: box7;
+  background-color: white;
+  padding: 15px;
+}
+
+.gallery > .box8 {
+  grid-area: box8;
+  background: url("https://picsum.photos/400/150");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery__title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.gallery__description {
+  font-size: 11px;
+}
+
+.gallery > .box > a {
+  padding: 10px;
+  background-color: #131313;
+  color: white;
+  text-transform: uppercase;
+  font-size: 11px;
+  align-self: flex-start;
+}
