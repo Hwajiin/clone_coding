@@ -5,6 +5,9 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 header .logo {
@@ -26,9 +29,55 @@ nav > ul > li {
   margin-right: 20px;
   text-transform: uppercase;
   font-size: 11px;
+  cursor: pointer;
 }
 
-nav > i {
+.toggle-btn {
   margin-right: 20px;
   cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 0px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+  header {
+    flex-direction: column;
+  }
+
+  header .logo {
+    align-self: flex-start;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .toggle-btn {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .menu > li {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease-in;
+  }
+
+  .menu > li:hover {
+    background-color: #eee;
+  }
+
+  .menu.open {
+    display: block;
+  }
 }
